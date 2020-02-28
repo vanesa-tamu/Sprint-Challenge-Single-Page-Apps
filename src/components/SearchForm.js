@@ -30,6 +30,11 @@ export default function SearchForm({ characters}) {
             type='text'
          />
      </form>
+     <div>
+        {data.map(characterMatch => (
+          <CharacterCard character={characterMatch} key ={characterMatch.id}/> 
+        ))}
+      </div>
     </section>
   );
 }
